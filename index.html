@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="output.css" />
+
+    <title> Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      .result {
+        background-color: hsl(241, 81%, 54%);
+        text-align: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 300px;
+        height: 400px;
+      }
+      h1 {
+        color: hsl(0, 0%, 100%);
+        margin-top: 0px;
+      }
+      h2 {
+        color: hsl(241, 100%, 89%);
+      }
+      .circle {
+        width: 140px;
+        height: 140px;
+        border-radius: 70px;
+        text-align: center;
+      }
+      .first-part {
+        color: hsl(241, 100%, 89%);
+      }
+      .summery {
+        border-radius: 20px;
+        width: 300px;
+        height: 400px;
+      }
+      span {
+        color: hsl(0, 0%, 100%);
+      }
+
+      .reaction {
+        background-color: hsla(0, 100%, 95%);
+        border-radius: 5px;
+      }
+      .memory {
+        background-color: hsl(39, 100%, 95%);
+        border-radius: 5px;
+      }
+      .verbal {
+        background-color: hsl(166, 100%, 90%);
+        border-radius: 5px;
+      }
+      .visual {
+        background-color: hsl(234, 85%, 90%);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center md:mx-20">
+    <div
+      class="container grid md:grid-cols-2 h-screen justify-center items-center"
+    >
+      <div class="result md:col-span-1 md:ml-auto">
+        <h2 class="">Your Result</h2>
+        <div
+          class="circle font-serif font-bold bg-gradient-to-r from-[#4e21ca] to-[#2421ca] p-7"
+        >
+          <span class="text-5xl">76</span>
+          <p class="first-part">of 100</p>
+        </div>
+        <h1 class="text-2xl mt-0 text-white">Great</h1>
+        <p class="px-10 mt-0" style="color: hsl(241, 100%, 89%)">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summery md:col-span-1 flex-col justify-center items-center">
+        <h1 class="text-slate-950 text-left p-3 text-2xl md:text-xl">
+          Summery
+        </h1>
+        <div class="cards">
+          <div class="reaction m-4 p-2 flex">
+            <img
+              src="./assets/images/icon-reaction.svg"
+              class="mr-3"
+              alt="Reaction"
+            />
+            <span class="text-red-500 mr-10">Reaction</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">80</span> / 100</span
+            >
+          </div>
+          <div class="memory m-5 p-2 flex">
+            <img
+              src="./assets/images/icon-memory.svg"
+              class="mr-3"
+              alt="Memory"
+            />
+            <span class="text-yellow-500 mr-10">Memory</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">92</span> / 100</span
+            >
+          </div>
+          <div class="verbal m-5 p-2 flex">
+            <img
+              src="./assets/images/icon-verbal.svg"
+              class="mr-3"
+              alt="Verbal"
+            />
+            <span class="text-teal-500 mr-12">Verbal</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">61</span> / 100</span
+            >
+          </div>
+          <div class="visual m-5 p-2 flex">
+            <img
+              src="./assets/images/icon-visual.svg"
+              class="mr-3"
+              alt="Visual"
+            />
+            <span class="text-blue-500 mr-12">Visual</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">72</span> / 100</span
+            >
+          </div>
+          <div class="button flex justify-center mt-5">
+            <button
+              class="bg-slate-800 text-white hover:bg-gradient-to-r from-[#7857ff] to-[#2e2be9] w-60 h-10 rounded-3xl mt-4"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container lg:flex lg:justify-center items-center h-screen">
+      <div
+        class="result sm:w-40 sm:h-40 bg-gradient-to-r from-[#7857ff] to-[#2e2be9]"
+      >
+        <h2 class="p-0 mb-3 mt-0">Your Result</h2>
+        <div
+          class="circle font-serif font-bold bg-gradient-to-r from-[#4e21ca] to-[#2421ca] p-7"
+        >
+          <span class="text-5xl">76</span>
+          <p class="first-part">of 100</p>
+        </div>
+        <h1 class="first-part">Great</h1>
+        <p class="first-part">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summery shadow-lg">
+        <h1 class="text-slate-950 text-left p-3 mt-5 text-2xl">Summery</h1> -->
+    <!-- Adding cards         -->
+    <!-- <div class="cards">
+          <div class="reaction m-4 p-2 lg:flex">
+            <img
+              src="./assets/images/icon-reaction.svg"
+              class="mr-3"
+              alt="Reaction"
+            />
+            <span class="text-red-400 mr-10">Reaction</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">80</span> / 100</span
+            >
+          </div>
+          <div class="memory m-4 p-2 lg:flex">
+            <img
+              src="./assets/images/icon-memory.svg"
+              class="mr-3"
+              alt="Memory"
+            />
+            <span class="text-yellow-300 mr-10">Memory</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">92</span> / 100</span
+            >
+          </div>
+          <div class="verbal m-4 p-2 lg:flex">
+            <img
+              src="./assets/images/icon-verbal.svg"
+              class="mr-3"
+              alt="Verbal"
+            />
+            <span class="text-teal-300 mr-12">Verbal</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">61</span> / 100</span
+            >
+          </div>
+          <div class="visual m-4 p-2 lg:flex">
+            <img
+              src="./assets/images/icon-visual.svg"
+              class="mr-3"
+              alt="Visual"
+            />
+            <span class="text-blue-300 mr-12">Visual</span>
+            <span class="text-right ml-12 text-slate-400"
+              ><span class="text-black">72</span> / 100</span
+            >
+          </div>
+          <div class="button flex justify-center mt-5">
+            <button
+              class="mt-2 bg-slate-800 text-white hover:bg-gradient-to-r from-[#7857ff] to-[#2e2be9]"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <p>
+      Your Result 76 of 100 Great You scored higher than 65% of the people who
+      have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal
+      61 / 100 Visual 72 / 100 Continue
+    </p> -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

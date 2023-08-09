@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville&family=Lobster&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Lobster', cursive;
+    }
+}
